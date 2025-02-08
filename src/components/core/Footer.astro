@@ -10,51 +10,55 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
 <footer
   style={background && `--footer-bg:${background}; --footer-color:${color}`}
 >
-  <Container>
-    <div class="footer-grid__container">
-      <div class="footer-brand__container">
-        <div>
-          <slot name="logo" />
-        </div>
-        <ul class="footer-socials__list">
-          {
-            footerSocials.map((social) => (
-              <li class="footer-socials__item">
-                <a
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="footer-socials__link"
-                  title={`Open ${social.name} profile`}
-                >
-                  <Icon name={social.icon} width={24} height={24} />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+<Container>
+  <div class="footer-grid__container">
+    <div class="footer-brand__container">
+      <div>
+        <slot name="logo" />
       </div>
-      {
-        footerLists.map((list) => (
-          <div>
-            <p><strong>{list.title}</strong></p>
-            <ul class="footer-link__list">
-              {list.items.map((item) => (
-                <li>
-                  <a href={item.slug}>{item.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      <!-- <ul class="footer-socials__list">
+        {
+          footerSocials.map((social) => (
+            <li class="footer-socials__item">
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-socials__link"
+                title={`Open ${social.name} profile`}
+              >
+                <Icon name={social.icon} width={24} height={24} />
+              </a>
+            </li>
+          ))
+        }
+      </ul> -->
     </div>
-    <div class="footer-copyright__container">
-      {showPlug && <Plug/>}
-      <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
+    {
+      footerLists.map((list) => (
+        <div>
+          <p><strong>{list.title}</strong></p>
+          <ul class="footer-link__list">
+            {list.items.map((item) => (
+              <li>
+                <a href={item.slug}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    <div class="footer-contact__container">
+      <p><strong>Contact Us</strong></p>
+      <p>📞 <a href="tel:+1234567890">+1 (431) 307-7525</a></p>
+      <p>📧 <a href="mailto:contact@example.com">primalxeno@gmail.com</a></p>
     </div>
-
-  </Container>
+  </div>
+  <div class="footer-copyright__container">
+    {showPlug && <Plug/>}
+    <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
+  </div>
+</Container>
 </footer>
 
 <style>

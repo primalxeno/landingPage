@@ -9,21 +9,22 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 	<HomeHeroSection />
 	<Container>
 		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
+			<h2>Featured Products</h2>
 			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
+				View our line up health products.
 			</p>
 			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
+				<FeatureCard href="/products/product-1" title="Oil" imgSrc="/assets/images/home/oil.jpg">
 				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
+				<FeatureCard href="/products/product-2" title="Serum" imgSrc="/assets/images/home/serum.jpg">
+				</FeatureCard>
+				<FeatureCard href="/products/product-3" title="Tablets" imgSrc="/assets/images/home/tablets.jpg">
 				</FeatureCard>
 			</div>
 		</section>
 	</Container>
 
-	<Container>
+	<!-- <Container>
 		<section class="feature-card__section">
 			<h2>Company Pages</h2>
 			<p>
@@ -72,7 +73,7 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 				</FeatureCard>
 			</div>
 		</section>
-	</Container>
+	</Container> -->
 </Layout>
 
 <style>
